@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import io
 import matplotlib.pyplot as plt
-
+import seaborn as sns
 
 st.title('Data Viusalize')
 st.header('Upload file dữ liệu')
@@ -29,3 +29,9 @@ if file is not None:
     plt.xlabel(col)
     plt.ylabel('quanlity')
     st.pyplot(fig)
+
+  st.header('vẽ biểu đồ histogram biểu diễn sự phân bố giá trị của các thuộc tính')
+  fig,ax=plt.subplots()
+  correlation = df.corr(method='pearson')
+  fig = plt.subplots(figsize=(10,10))
+  sns.heatmap(correlation, vmax=1, square=True, annot=True, cmap='Blues')
