@@ -21,7 +21,7 @@ if file is not None:
 
   st.header('Visualize')
   for col in list(df.columns):
-    fig,ax=plt.suplots()
+    fig,ax=plt.subplots()
     ax.hist(df[col],bins=20)
     plt.xlabel(col)
     plt.ylabel('quanlity')
