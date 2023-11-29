@@ -28,4 +28,4 @@ if file is not None:
     ax.hist(df[col],bins=20)
     plt.xlabel(col)
     plt.ylabel('quanlity')
-    st.pylot(fig)
+    st.pyplot(fig)
