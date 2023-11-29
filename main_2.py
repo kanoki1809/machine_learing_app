@@ -10,7 +10,7 @@ input = open('lrc_xray.pkl','rb')
 model = pkl.load(input)
 
 st.header('image')
-image = st.file_uploader('choose an image:',type=(['.png'],['.jpg'],['.jpeg']))
+image = st.file_uploader('choose an image:',type=(['png','jpg','jpeg']))
 
 
 if image is not None:
