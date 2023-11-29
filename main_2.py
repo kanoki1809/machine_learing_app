@@ -17,7 +17,7 @@ if image is not None:
   image =Image.open(image)
   st.image(image,caption='test image')
 
-if st.butyon('Predict'):
+if st.button('Predict'):
   image=image.resize((227*227*3,1))
   vector =np.array(image)
   Label=st.write(model.predict(vector))
