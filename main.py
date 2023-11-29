@@ -3,7 +3,7 @@ st.title('Data Viusalize')
 st.header('upload data file')
 st.file_uploader('choose a csv file: ', type=(['.csv']))
 
-if data_file is not None:
+if data_file is not none:
   df=pd.read_csv(data_file)
   
   st.header('showdata')
@@ -12,4 +12,4 @@ if data_file is not None:
   st.header('describe')
   st.table(df.describe())
 
-
+  st.write(df.info())
