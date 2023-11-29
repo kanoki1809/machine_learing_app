@@ -10,7 +10,7 @@ input = open('lrc_xray.pkl','rb')
 model = pkl.load(input)
 
 st.header('image')
-image = st.file_uploader('choose an image:',type=(['png'],['jpg'],['jpeg']))
+image = st.file_uploader('choose an image:',type=(['.png'],['.jpg'],['.jpeg']))
 
 
 if image is not None:
@@ -20,7 +20,7 @@ if image is not None:
 if st.button('Predict'):
   image=image.resize((227*227*3,1))
   vector =np.array(image)
-  label=st.write(model.predict(vector))
+  label= st.write(model.predict(vector))
 
 st.header('ket qua')
 st.text(class_list[label])
