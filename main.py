@@ -1,2 +1,2 @@
 import Streamlit as st
-st.header('Data Viusalize')
+st.title('Data Viusalize')
