@@ -2,4 +2,4 @@ matplotlib
 seaborn
 numpy
 scikit-learn
-sklearn
+
