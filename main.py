@@ -3,9 +3,9 @@ import pandas as pd
 import io
 st.title('Data Viusalize')
 st.header('upload data file')
- data_file = st.file_uploader('choose a csv file: ', type=(['.csv']))
+ file = st.file_uploader('choose a csv file: ', type=(['.csv']))
 
-if data_file is not None:
+if file is not None:
   df=pd.read_csv(data_file)
   
   st.header('showdata')
@@ -22,4 +22,7 @@ if data_file is not None:
   st.header('Visualize')
   for col in list(df.columns):
     fig,ax=plt.suplots()
-    ax.hist(df[col])
+    ax.hist(df[col],bins=20)
+    plt.xlabel(col)
+    plt.ylabel('quanlity')
+    st.pylot(fig)
