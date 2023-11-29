@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import io
-import matplotlib.pyplot as plt
+import matplotlib as plt
 st.title('Data Viusalize')
 st.header('upload data file')
 file = st.file_uploader('choose a csv file: ', type=(['.csv']))
