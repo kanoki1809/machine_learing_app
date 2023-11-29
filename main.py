@@ -30,7 +30,7 @@ if file is not None:
     plt.ylabel('quanlity')
     st.pyplot(fig)
 
-  st.header('vẽ biểu đồ histogram biểu diễn sự phân bố giá trị của các thuộc tính')
+  st.header(' tính hệ số tương quan giữa các thuộc tính')
   fig,ax=plt.subplots()
   correlation = df.corr(method='pearson')
   sns.heatmap(correlation, vmax=1, square=True, annot=True, ax=ax,cmap='Blues')
