@@ -9,7 +9,7 @@ if data_file is not None:
   st.header('showdata')
   st.dataframe(df)
   
-  st.header('descrise')
-  st.table(df.descrise())
+  st.header('describe')
+  st.table(df.describe())
 
 
