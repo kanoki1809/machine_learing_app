@@ -3,7 +3,7 @@ from PIL import Image
 import pickle as pkl
 import numpy
 
-class_list={}
+class_list={'0':'normal','1':'PNEUMONIA'}
 st.title('PNEUMONIA')
 input=open('Irc_xray.pkl','rb')
 model=pkl.load(input)
