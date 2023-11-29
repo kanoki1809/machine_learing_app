@@ -38,8 +38,8 @@ if file is not None:
 
   output=st.radio('choose  depent',df.columns)
   st.header(' tính hệ số tương quan giữa các thuộc tính')
-    for col in list(df.columns):
-      if col != output:
+  for col in list(df.columns):
+    if col != output:
         fig,ax=plt.subplots()
         ax.scatter(x= df[col],y=df[output])
         plt.xlabel(col)
