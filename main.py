@@ -36,14 +36,13 @@ if file is not None:
   sns.heatmap(correlation, vmax=1, square=True, annot=True, ax=ax,cmap='Blues')
   st.write(fig)
 
-  ouput=st.radio('',df.columns)
+  ouput=st.radio('choose  depent',df.columns)
   st.header(' tính hệ số tương quan giữa các thuộc tính')
     for col in list(df.columns):
       if col != ouput:
-        
         fig,ax=plt.subplots()
         ax.scatter(x= df[col],y=df[output])
         plt.xlabel(col)
-        plt.ylabel('output')
+        plt.ylabel(output)
         st.pyplot(fig)
   
