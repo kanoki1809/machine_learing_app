@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import pickle as pkl
 import numpy
+import sklearn
 
 class_list={'0':'normal','1':'PNEUMONIA'}
 st.title('PNEUMONIA')
