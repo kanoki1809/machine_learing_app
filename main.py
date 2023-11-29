@@ -6,7 +6,7 @@ st.header('upload data file')
 file = st.file_uploader('choose a csv file: ', type=(['.csv']))
 
 if file is not None:
-  df=pd.read_csv(data_file)
+  df=pd.read_csv(file)
   
   st.header('showdata')
   st.dataframe(df)
