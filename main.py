@@ -35,3 +35,4 @@ if file is not None:
   correlation = df.corr(method='pearson')
   fig = plt.subplots(figsize=(10,10))
   sns.heatmap(correlation, vmax=1, square=True, annot=True, cmap='Blues')
+  st.write(fig)
