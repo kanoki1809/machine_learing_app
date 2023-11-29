@@ -3,7 +3,7 @@ import pandas as pd
 import io
 st.title('Data Viusalize')
 st.header('upload data file')
- file = st.file_uploader('choose a csv file: ', type=(['.csv']))
+file = st.file_uploader('choose a csv file: ', type=(['.csv']))
 
 if file is not None:
   df=pd.read_csv(data_file)
