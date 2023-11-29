@@ -5,8 +5,8 @@ import numpy
 
 class_list={'0':'normal','1':'PNEUMONIA'}
 st.title('PNEUMONIA')
-input=open('Irc_xray.pkl','rb')
-model=pkl.load(input)
+input = open('lrc_xray.pkl','rb')
+model = pkl.load(input)
 
 st.header('image')
 image = st.file_uploader('choose an image:',type=(['png'],['jpg'],['jpeg']))
