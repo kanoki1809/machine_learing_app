@@ -1,9 +1,11 @@
 import streamlit as st
+import pandas as pd
+import io
 st.title('Data Viusalize')
 st.header('upload data file')
 st.file_uploader('choose a csv file: ', type=(['.csv']))
 
-if data_file is not none:
+if data_file is not None:
   df=pd.read_csv(data_file)
   
   st.header('showdata')
@@ -11,5 +13,8 @@ if data_file is not none:
   
   st.header('describe')
   st.table(df.describe())
-
-  st.write(df.info())
+  
+  st.header('describe')
+  buffer=io.StringIO()
+  df.info(buf=buffer)
+  st.text(buffer.getvalue())
