@@ -5,24 +5,24 @@ import matplotlib.pyplot as plt
 
 
 st.title('Data Viusalize')
-st.header('upload data file')
+st.header('Upload file dữ liệu')
 file = st.file_uploader('choose a csv file: ', type=(['.csv']))
 
 if file is not None:
   df=pd.read_csv(file)
   
-  st.header('showdata')
+  st.header('hiển thị dữ liệu')
   st.dataframe(df)
   
-  st.header('describe')
+  st.header('thống kê mô tả dữ liệu')
   st.table(df.describe())
   
-  st.header('describe')
+  st.header('mô tả các thuộc tính')
   buffer=io.StringIO()
   df.info(buf=buffer)
   st.text(buffer.getvalue())
 
-  st.header('Visualize')
+  st.header('vẽ biểu đồ histogram biểu diễn sự phân bố giá trị của các thuộc tính')
   for col in list(df.columns):
     fig,ax=plt.subplots()
     ax.hist(df[col],bins=20)
