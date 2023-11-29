@@ -33,6 +33,5 @@ if file is not None:
   st.header('vẽ biểu đồ histogram biểu diễn sự phân bố giá trị của các thuộc tính')
   fig,ax=plt.subplots()
   correlation = df.corr(method='pearson')
-  fig = plt.subplots(figsize=(10,10))
-  sns.heatmap(correlation, vmax=1, square=True, annot=True, cmap='Blues')
+  sns.heatmap(correlation, vmax=1, square=True, annot=True, ax=ax,cmap='Blues')
   st.write(fig)
