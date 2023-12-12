@@ -5,7 +5,7 @@ import numpy as np
 
 
 class_list={'0':'normal','1':'PNEUMONIA'}
-st.title('PNEUMONIA')
+st.title('Chest X-Ray Images (Pneumonia)')
 input = open('lrc_xray.pkl','rb')
 model = pkl.load(input)
 
